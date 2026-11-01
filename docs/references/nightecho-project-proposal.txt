@@ -1,0 +1,1199 @@
+page 1
+NightEcho — Full Project Proposal
+Oct 31, 2026  ·  @amanda
+NightEcho turns the phone on a nightstand into a contactless sonar sleep monitor that
+screens for REM sleep behavior disorder (RBD), the strongest early warning sign of
+Parkinson's disease and Lewy body dementia, and supports dementia and autism sleep
+care. This proposal lays out every step from today to the Innovation Stage deadline (
+Jan 7, 2027 ) and the Innovation Summit (  Apr 21, 2027 ).
+At a glance
+NightEcho needs no hardware beyond a phone, costs under $500 to prototype, and can
+show a working demo plus simulated results by January 7.
+Item Plan
+Title NightEcho: A Contactless Smartphone Sonar
+Platform and Modular Machine Learning Engine for
+Early Screening of REM Sleep Behavior Disorder,
+Neurodegenerative Risk, and Pediatric Autism
+Sleep Disturbances
+Problem RBD is the strongest early sign of Parkinson's and
+Lewy body dementia, but diagnosis needs an
+overnight video sleep study. Dementia caregivers
+sleep through night wandering. Many autistic
+children refuse wearable trackers.
+Solution An app that uses the phone's own speaker and
+microphone as sonar to track breathing,
+movement, bed exits and vocal events, feeding
+three modules: RBD screening, dementia alerts,
+autism sleep tracking.
+Who it serves Adults 50+ who act out dreams; dementia
+caregivers and memory-care facilities; parents of
+autistic children; sleep clinics; Parkinson's trial
+sponsors
+NightEcho — Full Project Proposal
+Page 1 of 31
+
+page 2
+Problem and significance
+The warning signs for all three groups happen at night, and today's tools need either a
+sleep lab or something worn on the body.
+RBD: a warning sign years ahead
+People with RBD act out their dreams by shouting, punching or kicking, because the
+normal muscle paralysis of REM sleep is lost.
+In a 1,280-patient multicenter study, people with isolated RBD developed Parkinson's
+disease, Lewy body dementia or multiple system atrophy at 6.3% per year; 73.5% had
+converted after 12 years (Postuma et al., Brain 2019).
+In the HypnoLaus general-population study, 21 of 1,997 adults (1.06%) met sleep-study
+criteria for RBD (Haba-Rubio et al., SLEEP). Most people with RBD are never
+diagnosed.
+Diagnosis requires video-polysomnography with expert scoring, which does not scale
+to screening or to finding patients for trials (Skjærbæk et al., 2026).
+Questionnaires are cheap but flag many false positives from lookalikes such as sleep
+apnea, nightmares, medications and NREM parasomnias (Cesari et al., J Sleep Res
+2025).
+Item Plan
+What is new RBD screening with only a phone's speaker and
+microphone; gates that remove known RBD
+lookalikes; a simulator that turns public sleep-lab
+recordings into training data for sonar
+Key targets RBD AUC > 0.85; breathing-rate error < 1
+breath/min; bed-exit recall > 95%; caregiver alert <
+10 s
+Category Health and Nutrition
+Budget Under $500 for the prototype, plus the $499
+Innovation Stage fee (financial aid available)
+Deadlines Innovation Stage: Jan 7, 2027, 11:59 PM CT. Finalists
+announced: February 2027. Innovation Summit: Apr
+21–24, 2027, Space Center Houston
+NightEcho — Full Project Proposal
+Page 2 of 31
+
+page 3
+Neuroprotective drug trials need 142–366 RBD patients per study arm, so finding these
+people early is a bottleneck for research (Postuma et al., 2019).
+Dementia: nights drive injuries and moves to nursing homes
+An estimated 7.4 million Americans age 65 and older live with Alzheimer's dementia in
+2026 (Alzheimer's Association).
+Nighttime activity raises the risk of injury and unattended exits from the home, and in
+one caregiver study it frequently led to nursing-home placement (Rowe et al.,
+Alzheimer's & Dementia 2009).
+Fragmented sleep signals risk: among 737 older adults, those in the top 10% for sleep
+fragmentation had 1.5 times the risk of developing Alzheimer's compared with the
+bottom 10% (Lim et al., Sleep 2013).
+Autism: sleep problems are common and hard to measure
+About 1 in 31 U.S. 8-year-olds has an autism diagnosis (CDC ADDM Network, 2022 data,
+released April 2025).
+Up to 81% of autistic children have sleep problems. When 214 autistic 2- to 6-year-olds
+were asked to wear an activity tracker for 14 days, device intolerance cost 42% of the
+cohort's data (Rapp et al., Sleep 2025).
+The gap: no current tool screens for RBD, alerts dementia caregivers and tracks children's
+sleep without something to wear or buy.
+Prior work and novelty
+Phone sonar for sleep is not new: SleepScore has used it since 2018. NightEcho's novelty is
+what the sonar is used for (RBD screening, dementia alerts, children's sleep) and how the
+model is trained before any patient data exists.
+Approach Examples Limitation for NightEcho's users
+Video sleep study Hospital sleep lab (the diagnostic
+gold standard)
+One night, costly, needs expert
+scoring
+Questionnaires RBD single-question screen Many false positives from
+lookalikes (Cesari et al., 2025)
+NightEcho — Full Project Proposal
+Page 3 of 31
+
+page 4
+What NightEcho adds
+1 . RBD screening from the phone's own speaker and microphone, with no wearable,
+camera or bed sensor. Our searches found no published or commercial example; the
+novelty check below must confirm this.
+2. Lookalike gates. A REM gate, a breathing-pause check and a range gate each remove a
+specific RBD mimic that defeats questionnaires.
+3. A PSG-to-sonar simulator. Public sleep-lab recordings with confirmed diagnoses
+become sonar-like training data, so the model learns RBD before any patient sleeps
+beside a phone.
+4. One sensing engine, three decision modules for RBD, dementia and autism.
+5. Privacy by design. Raw audio never leaves the phone's memory and is never saved.
+Novelty check (do this in week 1)
+Approach Examples Limitation for NightEcho's users
+Body-worn
+sensors
+Wrist actigraphy (ActiTect),
+lower-back sensor, self-applied
+electrodes
+Must be worn every night; many
+autistic children refuse
+Bed and radar
+sensors
+Under-mattress sensor in 83
+people with Alzheimer's;
+MinderCare radar in 30 dementia
+homes
+Extra hardware in every home;
+none yet validated for RBD
+Phone sonar UW ApneaApp, licensed into the
+SleepScore app (ResMed joint
+venture, 2018); sonar sleep-apnea
+screener, 94% sensitivity, 97%
+specificity
+Built for general sleep and apnea,
+not RBD, dementia alerts or
+children
+Search Google Patents for: "smartphone sonar REM sleep behavior disorder", "acoustic
+dream enactment detection", "contactless RBD screening", "FMCW audio sleep
+movement".
+Run the same searches on Google Scholar and PubMed, adding "phone", "acoustic" and
+"ultrasound".
+Search the App Store and Google Play for "RBD", "dream enactment" and "Parkinson's
+sleep".
+NightEcho — Full Project Proposal
+Page 4 of 31
+
+page 5
+Objectives, hypotheses and success criteria
+The primary outcome is O3: subject-level AUC for RBD on held-out subjects. Every other
+objective is secondary, and each has a pass/fail target fixed before testing.
+Read the claims of the 3–5 closest patents (start with ResMed's and SleepScore's
+sonar patents) and write one sentence on how NightEcho differs from each.
+Log every search (date, query, top results, our difference) in a prior-art log. Conrad's
+scoring guide asks whether an online search confirmed the idea is unique.
+If you want a patent, talk to your coach about a provisional filing before the website
+and video go public in January. U.S. law gives inventors one year after their own
+disclosure; most other countries give none.
+# Objective Hypothesis Test Pass if
+O1 Build the phone
+sonar engine
+Phone sonar
+measures
+breathing as well
+as a chest belt
+10 adults × 2 home
+nights, phone vs
+Vernier
+respiration belt
+Mean absolute
+breathing-rate
+error < 1
+breath/min
+O2 Build the PSG-to-
+sonar simulator
+The signal chain
+recovers what was
+simulated
+Simulated nights
+from CAP
+Breathing
+correlation r ≥ 0.9;
+≥ 90% of injected
+limb movements
+found
+O3 Screen for RBD
+(primary)
+Sonar-type signals
+separate RBD
+from non-RBD
+subjects
+Leave-one-
+subject-out on 103
+CAP subjects
+AUC > 0.85, with a
+95% confidence
+interval reported
+O4 Remove RBD
+lookalikes
+The gates cut false
+positives in mimic
+disorders
+Same model with
+and without gates,
+on the 63 CAP
+mimic subjects
+Fewer false
+positives with
+gates (McNemar's
+test, p < 0.05)
+O5 Alert dementia
+caregivers
+Bed exits are
+caught quickly
+and reliably
+Scripted bedroom
+trials
+Recall > 95%;
+median alert < 10 s
+NightEcho — Full Project Proposal
+Page 5 of 31
+
+page 6
+The 63 mimic subjects are CAP's periodic leg movement (10), sleep-disordered breathing
+(4), nocturnal frontal lobe epilepsy (40) and insomnia (9) groups.
+System overview
+One sensing engine turns echoes into event streams; a shared feature layer and sleep
+stager feed three modules, and everything runs on the phone.
+Figure 1. NightEcho pipeline, from public sleep-lab data and phone recordings to on-device
+alerts.
+# Objective Hypothesis Test Pass if
+O6 Track children's
+sleep acceptably
+(exploratory)
+Parents find the
+reports useful and
+children don't
+notice the chirps
+Parent interviews;
+audibility check
+with parental
+permission
+No pass/fail; report
+findings
+NightEcho — Full Project Proposal
+Page 6 of 31
+
+page 7
+1 . Data preparation. Public sleep-lab recordings with confirmed diagnoses (CAP Sleep
+Database) plus a large sleep-study set for pre-training (MESA, or the open PhysioNet
+2018 set if MESA access is slow).
+2. Sonar simulation. Breathing-belt and leg-muscle signals become sonar-like signals,
+keeping the sleep-stage and diagnosis labels.
+3. Feature extraction. Each 30-second epoch gets breathing, movement, event and time-
+of-night features.
+4. Leakage-safe validation. A subject's data never appears in both training and testing.
+5. Transfer-learning training. A sleep stager learns on real sleep-study breathing, then
+adapts to sonar.
+6. Modules and evaluation. RBD screening, dementia bed-exit alerts and autism sleep
+tracking, each tested against a simpler baseline.
+7. On-device deployment. The trained models run on the phone, and only results leave
+the app.
+Two tracks run in parallel: the data track (Phases 1–7, on laptops) and the phone track
+(Phase 8). They meet when the trained model is exported into the app.
+Sonar sensing design
+The phone sweeps an 18–22 kHz chirp every 10 ms. Echoes are sorted into 4.3 cm range
+bins, and tiny phase shifts in the sleeper's bin reveal each breath.
+NightEcho — Full Project Proposal
+Page 7 of 31
+
+page 8
+Figure 2. Smartphone sonar front end: acoustic chain, sonar and voice bands, and bedside
+geometry.
+Parameters
+Key equations
+Range resolution, where c is the speed of sound and B the sweep bandwidth:
+\Delta R = \frac{c}{2B} = \frac{343\ \mathrm{m/s}}{2 \times 4000\ 
+\mathrm{Hz}} \approx 4.3\ \mathrm{cm}
+Breathing phase, where Δ d is chest displacement and λ  the wavelength:
+Parameter Value Why
+Sweep band 18–22 kHz (pediatric mode: 20 kHz
+and up)
+Above most adults' hearing; inside a
+phone's 48 kHz capture
+Chirp length 10 ms (480 samples), edges tapered
+over 0.5 ms
+100 frames per second; tapering
+prevents audible clicks
+Sample rate 48 kHz, mono, 16-bit Supported by nearly all phones;
+captures up to 24 kHz
+Range bin ≈ 4.3 cm Set by the 4 kHz sweep bandwidth
+Range
+window
+0.2–1.5 m Bedside distances; an echo from 1.5
+m returns in 8.7 ms, inside one chirp
+Wavelength ≈ 1.7 cm at 20 kHz 5 mm of chest motion shifts the
+echo phase by ≈ 3.7 rad
+Breathing
+band
+0.1–0.7 Hz 6–42 breaths per minute, adults
+through young children
+Motion rule Change energy above median + 5 ×
+MAD for ≥ 0.5 s
+Adapts to each bedroom's noise
+level
+Bed-exit rule Sleeper's bin empty ≥ 5 s after large
+motion
+Leaves time to alert in under 10 s
+Voice band 80 Hz–8 kHz, resampled to 16 kHz The input format of YAMNet, the
+sound classifier
+NightEcho — Full Project Proposal
+Page 8 of 31
+
+page 9
+\Delta\varphi = \frac{4\pi\,\Delta d}{\lambda}, \qquad \lambda = \frac{c}{f} 
+= \frac{343}{20\,000} \approx 1.7\ \mathrm{cm}, \qquad \Delta d = 5\ 
+\mathrm{mm} \Rightarrow \Delta\varphi \approx 3.7\ \mathrm{rad}
+The signal chain, in order
+1 . Generate the chirp: a linear sweep from 18 to 22 kHz over 10 ms, with a 0.5 ms raised-
+cosine taper at both ends, looped continuously at low volume.
+2. Align frames: cross-correlate the recording with the chirp. The first strong peak is the
+direct speaker-to-microphone path, which marks where each frame starts.
+3. Dechirp: band-pass 18–22 kHz, form the analytic (complex) signal, and multiply by the
+complex conjugate of the transmitted chirp.
+4. Range FFT: one FFT per 10 ms frame gives a complex range profile with 4.3 cm bins.
+5. Remove clutter: subtract each bin's 10-second moving average, which erases walls, the
+bed frame and other still objects.
+6. Lock the sleeper's bin: between 0.2 and 1.5 m, pick the bin with the most energy in the
+0.1–0.7 Hz breathing band over 30 s. Switch only if another bin stays stronger for 60 s.
+7. Breathing: unwrap the phase of the locked bin, band-pass it to 0.1–0.7 Hz and convert it
+to displacement ( Δ d = λΔφ  / 4π).
+8. Movement: sum the frame-to-frame change across bins from 0.2 to 1.5 m, and flag
+bursts above median + 5 × MAD lasting at least 0.5 s.
+9. Bed exit: large movement, then the sleeper's bin stays empty for at least 5 s, triggers
+an alert.
+1 0. Voice: low-pass to 8 kHz, resample to 16 kHz and run YAMNet. Keep only the labels and
+timestamps, then discard the audio.
+Known limits and safeguards
+Obstructive apnea: chest effort can continue while airflow stops, so sonar sees falling
+breathing amplitude and a large recovery breath, not a flat line. The breathing-pause
+check therefore looks for amplitude falling at least 50% for 10 s or more, followed by a
+recovery breath.
+Children: young people often hear tones near 20 kHz. Pediatric mode sweeps 20–22
+kHz, which coarsens the range bins to 8.6 cm, and an audibility check runs before the
+first night.
+NightEcho — Full Project Proposal
+Page 9 of 31
+
+page 10
+Pets: dogs and cats hear well above 22 kHz. Keep the volume low and watch for
+reactions during testing.
+Phone differences: speakers and microphones fade near 20 kHz at different rates.
+Measure each test phone first (step 8.2); if a phone can't reach 22 kHz, sweep 18–20
+kHz instead.
+Power and heat: overnight playback and processing need the phone plugged in. Log
+battery temperature during the overnight test.
+REM in people with RBD: movement during REM can make REM look like wake to a
+sleep stager (Skjærbæk et al., 2026), so the stager leans on breathing irregularity and
+sleep-cycle timing (Phase 4).
+Data sources and access
+The two open PhysioNet datasets can be downloaded today. MESA needs a free online
+request, so submit it in week 1 and use the PhysioNet 2018 set until it's approved.
+Dataset What we use Size Access First step
+CAP Sleep
+Database
+(PhysioNet)
+108 sleep
+studies: 22 RBD,
+16 healthy, 70
+other sleep
+disorders.
+Chest and
+abdominal
+belts, airflow,
+leg EMG on
+both legs, R&K
+sleep stages
+≈ 40.1 GB Open (Open
+Data Commons
+Attribution 1.0);
+cite Terzano et
+al., 2001
+Download with
+the wfdb  Python
+package or wget
+MESA Sleep
+(National Sleep
+Research
+Resource)
+2,237
+participants in
+the sleep exam:
+overnight sleep
+study plus 7
+days of wrist
+actigraphy
+Large;
+download
+only the
+channels you
+need
+Free; online Data
+Access and Use
+Agreement;
+approval time
+varies
+Create a
+sleepdata.org
+account and
+submit the
+request in week 1
+NightEcho — Full Project Proposal
+Page 10 of 31
+
+page 11
+Data-handling rules:
+Keep raw datasets on an external drive. Never commit them to GitHub; they are too
+large, and data use agreements typically forbid redistribution.
+Never try to identify people in any dataset.
+Cite every dataset in the brief, the video credits and the website.
+Record every excluded night and the reason in the data card (step 1.8).
+Dataset What we use Size Access First step
+PhysioNet 2018
+Challenge
+994 training
+subjects with
+30-second
+sleep stages; 13
+channels at 200
+Hz, including
+chest, abdomen
+and airflow
+≈ 135 GB
+(training set)
+Open (Open
+Data Commons
+Attribution 1.0)
+Backup for
+MESA; start with
+200 nights
+YAMNet (pre-
+trained sound
+model)
+Detects
+speech,
+shouting,
+laughter and
+snoring
+Small Free
+(TensorFlow)
+Use the
+TensorFlow Lite
+version on the
+phone
+Team-collected
+nights
+Phone sonar
+alongside a
+Vernier
+respiration belt;
+scripted trials
+with video as
+ground truth
+Small Signed consent
+(see Ethics)
+Start after
+consent forms
+are signed
+Clinical pilot
+(future)
+Phone
+recording
+beside a video
+sleep study
+— Partner
+institution's IRB
+Through a clinical
+partner (Phase
+10)
+NightEcho — Full Project Proposal
+Page 11 of 31
+
+page 12
+Step-by-step build: Phases 0–3
+Phases 0–3 build the data foundation: by December 6 every public sleep study is cleaned,
+converted into simulated sonar, and turned into features.
+Phase 0 · Setup and requests (Nov 2–8)
+Done when a test script opens one sleep-study file, the MESA request is submitted,
+mentor emails are sent and equipment is ordered.
+Phase 1 · Public-data pipeline (Nov 2–22)
+0.1 Open the Award Force portal and confirm your Lean Canvas was submitted and
+accepted. If it wasn't submitted by October 29, email info@conradchallenge.org today.
+0.2 Assign the four roles (see Team roles). Set a weekly team meeting and a check-in
+with your coach every two weeks.
+0.3 Create a private GitHub repository with folders data/ , sim/ , features/ ,
+models/ , app/  and docs/ , a README, and a dated lab notebook
+( docs/notebook.md ) with one entry per work session.
+0.4 Set up Python 3.11 or later in a virtual environment with numpy, scipy, pandas, wfdb,
+pyedflib, scikit-learn, xgboost, torch, shap and matplotlib.
+0.5 Create a sleepdata.org account and submit the MESA data request. Describe the
+use plainly: training a contactless sleep-stage model for a student research project.
+0.6 Run the novelty check (Prior work section) and start the prior-art log.
+0.7 Email 5–10 sleep neurologists or sleep-lab directors at nearby universities and
+hospitals to ask for mentorship (see Phase 10).
+0.8 Order the Vernier Go Direct Respiration Belt and one used Android test phone (see
+Budget).
+0.9 Get a 1 TB external drive for the datasets.
+1.1 Download CAP to the external drive with the wfdb  package or wget .
+1.2 Write load_night(record) : read the EDF file, list its channels, and map them to
+standard names ( thorax , abdomen , airflow , tib_left , tib_right ). Log any record
+that is missing a channel.
+1.3 Parse the sleep-stage files into 30-second labels and map the old R&K stages to
+today's AASM stages: S1 → N1, S2 → N2, S3 and S4 → N3, REM → REM, movement time →
+Wake. Drop unscored epochs.
+NightEcho — Full Project Proposal
+Page 12 of 31
+
+page 13
+Done when every included night loads with one function call and the data card is
+complete.
+Phase 2 · PSG-to-sonar simulator (Nov 9–Dec 6)
+1.4 Build subjects.csv  with record ID, diagnosis, age, sex (from CAP's age-sex
+spreadsheet), channels present and include/exclude. Exclude the 5 narcolepsy
+recordings, because narcolepsy often comes with RBD-like behavior and would blur
+the labels.
+1.5 Quality check: plot one night per diagnosis (chest belt, both legs, sleep stages) and
+note flat or noisy channels.
+1.6 Preprocess: low-pass the chest belt at 2 Hz and resample to 10 Hz. High-pass leg
+EMG at 10 Hz, rectify it, smooth it into an envelope and resample to 10 Hz. Save each
+night as one .npz  file with its labels.
+1.7 Repeat 1.2–1.6 for the pre-training set: MESA if approved, otherwise 200 nights from
+PhysioNet 2018 (chest belt and sleep stages).
+1.8 Write a one-page data card: counts per group, exclusions and reasons, and the
+share of epochs in each sleep stage.
+2.1 Chest motion: z-score each night's chest belt and scale it to displacement with a
+random breathing depth of 3–10 mm.
+2.2 Limb movements: detect leg-EMG events with the AASM limb-movement rule (at
+least 8 µV above resting EMG, lasting 0.5–10 s).
+2.3 Turn each limb movement into a moving reflector with a random speed of 0.2–1 m/s,
+placed 0.3–0.8 m beyond the chest, plus a small disturbance in the chest bin.
+2.4 Build the range–time map directly at 100 frames per second instead of simulating
+raw audio, which is far faster (equation below).
+2.5 Randomize each night: phone-to-chest distance 0.3–1.5 m; a bed partner half the
+time (breathing borrowed from another night, 0.3–0.8 m farther away); occasional pet
+movement; noise level; and a gentle gain tilt across bins to mimic different phones.
+2.6 Make 3 randomized versions of each night. Every version keeps its subject's ID.
+2.7 Sanity check: run the Phase 3 signal chain on simulated maps. Recovered breathing
+should match the belt (r ≥ 0.9), and at least 90% of injected limb movements should be
+found.
+2.8 Save the simulated nights with their inherited labels: sleep stage per epoch,
+diagnosis and event times.
+NightEcho — Full Project Proposal
+Page 13 of 31
+
+page 14
+For each reflector i at range R_i in frame n, with K spreading its energy across neighboring
+bins, C the static clutter and ε  the noise:
+X[n,k] = \sum_i a_i\, K\big(k - R_i(n)/\Delta R\big)\, e^{\,j 4\pi 
+R_i(n)/\lambda} + C[k] + \varepsilon[n,k]
+Done when step 2.7 passes on 20 random nights drawn from every diagnosis group.
+Phase 3 · Feature extraction (Nov 23–Dec 6)
+Done when all unit tests pass and features exist for every simulated night.
+Step-by-step build: Phases 4–6
+Phases 4–6 turn features into decisions: a sleep stager that finds REM-like sleep, the RBD
+screening logic, and the dementia and autism modules.
+Phase 4 · Sleep staging (Dec 7–20)
+3.1 Implement the shared chain from the range–time map onward (Sonar sensing
+design, steps 5–9) as one Python module. The phone app will copy it exactly.
+3.2 Breathing features per 30-second epoch: rate (spectral peak), breath-to-breath
+variability, depth (median peak-to-peak), regularity (autocorrelation peak) and change
+in depth from the previous two epochs.
+3.3 Movement features: burst count, total duration, peak energy (vigor), time since the
+last burst, and whether bursts repeat every 5–90 s (the periodic leg movement
+pattern).
+3.4 Breathing-disturbance features: drops in amplitude of at least 50% lasting 10 s or
+more, and the recovery breaths that follow.
+3.5 Vocal features (real nights only): YAMNet counts per epoch for speech, shouting,
+laughter, crying and snoring.
+3.6 Context features: minutes since sleep onset, clock hour, and the two epochs before
+and after.
+3.7 Unit-test each feature on synthetic signals with known answers; for example, a 0.25
+Hz sine wave must give 15 breaths per minute.
+3.8 Save one feature table per night (Parquet format).
+4.1 Build a baseline first: gradient-boosted trees on the epoch features, predicting
+Wake, NREM or REM. This guarantees a working result early.
+NightEcho — Full Project Proposal
+Page 14 of 31
+
+page 15
+Done when every held-out subject has a REM probability for every epoch.
+Phase 5 · RBD screening logic (Dec 14–27)
+4.2 Build the main model: a 1-D convolutional network reads each epoch's 10 Hz
+breathing and movement signals, and a bidirectional LSTM reads the sequence of
+epochs across the night. Output: Wake, NREM or REM.
+4.3 Use a class-weighted loss, because REM is the minority stage.
+4.4 Pre-train on MESA (or PhysioNet 2018) chest-belt signals passed through the
+simulator.
+4.5 Fine-tune on CAP simulated sonar, using only the training subjects inside each
+leave-one-subject-out fold. Inner grid: 3 learning rates × 3 choices of how many layers
+to freeze.
+4.6 Check the RBD trap: movement during REM makes REM look like wake. Measure
+REM recall separately in RBD subjects. If it's low, add features for breathing irregularity
+and time since the last REM-like period, since sleep cycles repeat roughly every 90
+minutes.
+4.7 Output a calibrated REM probability per epoch (temperature scaling, fitted on
+inner folds).
+4.8 Report Cohen's kappa against the sleep-lab stages, recall per stage and a confusion
+matrix, separately for the RBD, mimic and healthy groups.
+NightEcho — Full Project Proposal
+Page 15 of 31
+
+page 16
+Figure 3. RBD screening logic: per-event gates, nightly index and multi-night decision.
+Done when all 103 held-out subjects have a calibrated risk and a refer or re-screen
+decision.
+Phase 6 · Dementia and autism modules (Dec 14–Jan 3)
+Dementia module:
+5.1 Collect candidate events: movement bursts (all nights) and vocal events (real
+nights).
+5.2 REM gate: keep events in epochs whose REM probability is at least τ . Choose τ  on
+inner folds only.
+5.3 Breathing-pause check: drop events that start within 10 s after a breathing
+disturbance ends, and log them for the breathing summary.
+5.4 Range gate: keep events from the sleeper's bins and leg zone; drop partner and pet
+bins.
+5.5 Nightly RBD index = surviving events per hour of REM-like sleep. Add night
+features: event duration and vigor, overlap with vocal events, share of events in the
+second half of the night, and the rate and periodicity of NREM movements (which
+separates periodic leg movements).
+5.6 Define a valid night: at least 4 hours of detected sleep, with the sleeper's bin locked
+for at least 80% of it.
+5.7 Subject-level inputs: the median and spread of the nightly index across valid nights,
+plus intake answers (age, antidepressant use, the RBD single-question screen). CAP
+provides only age, so the other answers enter in the clinical pilot.
+5.8 Train two classifiers: L2-regularized logistic regression (baseline) and XGBoost
+(main), both class-weighted. Calibrate with Platt scaling on inner folds.
+5.9 Pick the threshold on inner folds to reach at least 90% sensitivity. In screening, a
+missed case costs more than a referral that rules RBD out.
+5.10 State CAP's limit plainly: it has one night per person, so Stage 1 tests the single-
+night index. The 3 simulated versions of each night test robustness to setup, not real
+night-to-night variation, which needs the clinical pilot.
+6.1 Bed-exit detector: large movement, then the sleeper's bin empty for at least 5 s,
+triggers an alert. Cancel it if breathing returns within those 5 s.
+6.2 Send alerts to the caregiver's phone with Firebase Cloud Messaging, and measure
+the end-to-end delay.
+NightEcho — Full Project Proposal
+Page 16 of 31
+
+page 17
+Autism module:
+Done when both modules run end to end on simulated nights and scripted-trial
+recordings.
+Step-by-step build: Phases 7–8
+Phase 7 makes the results trustworthy, and Phase 8 puts the engine on a real phone. They
+run in parallel with the modeling work.
+Phase 7 · Validation statistics (Dec 7–Jan 3)
+6.3 Log time out of bed and the return, and show a morning summary.
+6.4 Build a weekly trend for clinicians: wake time after sleep onset, number of
+awakenings and sleep efficiency. Keep it descriptive, with no diagnosis.
+6.5 Add caregiver settings: quiet hours, alert delay, and a second caregiver if the first
+doesn't respond.
+6.6 Pediatric mode: sweep 20–22 kHz at lower volume, and run an audibility check
+before the first night (play the sweep while the child is awake; the parent watches for
+any reaction).
+6.7 Measure sleep-onset latency (from a "lights out" tap to the first 10 minutes of
+steady sleep), night wakings and total sleep time.
+6.8 Build a weekly parent report with tags for routine changes (melatonin, bedtime
+routine, illness) to share with clinicians. Make no diagnostic claims.
+6.9 Interview at least 5 parents of autistic children and 1–2 occupational therapists
+about which report views help, and record what you changed.
+7.1 Lock the splits before training anything: the subject list, 103 outer folds (one per
+subject) and 4 inner folds grouped by subject. Save them as splits.json  and never
+change them after seeing results.
+7.2 Write automated leakage tests that stop a run if a subject appears in both training
+and testing, if a subject's simulated versions are split across folds, or if any scaling,
+threshold or setting was fit on test data.
+7.3 Pre-register the analysis: before the final runs, commit a dated analysis_plan.md
+naming the primary outcome, metrics, tests and threshold rule. Posting it on OSF
+(Open Science Framework) adds a public timestamp.
+NightEcho — Full Project Proposal
+Page 17 of 31
+
+page 18
+Compute: 103 outer folds × 9 settings × 4 inner folds = 3,708 small model fits. Free GPU
+notebooks (Kaggle, Google Colab) can handle this; run the baselines on a laptop CPU.
+Done when every metric has a confidence interval and both comparisons are finished.
+Phase 8 · Phone app (Nov 16–Jan 3)
+Stage A, no app needed (first week):
+Stage B, native Android prototype (Kotlin):
+7.4 Primary metric: subject-level AUC with a 95% bootstrap confidence interval (2,000
+resamples of subjects).
+7.5 Secondary metrics: sensitivity and specificity at the chosen threshold; the false-
+positive rate in each mimic group; calibration (Brier score and a reliability plot); and
+staging kappa.
+7.6 Comparisons: the full model against a motion-only baseline, using the DeLong test
+for the AUC difference and a paired Wilcoxon signed-rank test on per-subject Brier
+scores. Then the model with and without gates, using McNemar's test on false
+positives.
+7.7 Explain the model with TreeSHAP and check the top features make clinical sense.
+For example, events inside REM windows should matter more than NREM events.
+7.8 Make the results figure and table for the brief, and write one honest paragraph on
+the study's limits.
+8.1 In Python, generate a 10-minute 48 kHz WAV file of looping chirps (18–22 kHz, 10 ms
+each, 0.5 ms tapers).
+8.2 On each test phone, play the WAV at low volume while a recorder app saves
+uncompressed 48 kHz audio. Check the spectrogram: is the 18–22 kHz sweep there,
+and is the direct speaker-to-microphone path visible? Choose the band for each
+phone.
+8.3 Record 10 minutes of a teammate lying still and breathing normally, and process it
+with the Phase 3 code. Breathing in the phase plot is your first proof of concept; film it
+for the video.
+8.4 Play the chirp with AudioTrack  and record with AudioRecord  at 48 kHz, using the
+UNPROCESSED  audio source if the phone supports it (otherwise VOICE_RECOGNITION ).
+Run both in a foreground service so they continue all night with the screen off.
+8.5 Align frames to the direct speaker-to-microphone path with cross-correlation.
+NightEcho — Full Project Proposal
+Page 18 of 31
+
+page 19
+Done when an 8-hour night completes with under 1% dropped frames and the parity
+check passes.
+Step-by-step build: Phases 9–11
+Phases 9–11 test NightEcho on people, line up a clinical partner and package everything for
+Conrad's judges.
+Phase 9 · Human testing (Dec 14–Feb 28)
+8.6 Port the signal chain (dechirp, FFT, clutter removal, bin lock, phase, motion energy)
+to Kotlin or C++. Run the parity check: the same recording processed in Python and on
+the phone must give matching outputs.
+8.7 Export the stager and RBD model to TensorFlow Lite (int8) and run them every 30 s.
+Run YAMNet's TensorFlow Lite version for vocal events, keeping only labels and
+timestamps.
+8.8 Store nightly features in an encrypted on-phone database. Upload nothing unless
+the user opts in.
+8.9 Build the screens: setup check (distance and volume), start and stop a night,
+morning summary, weekly trends, caregiver alerts, pediatric-mode switch and intake
+questions (age, medications, the RBD single-question screen).
+8.10 Run an 8-hour overnight test with the phone plugged in, logging dropped frames
+and battery temperature.
+8.11 Optional, once Android works: an iOS version using AVAudioEngine , with the audio
+session in measurement mode to minimize the system's own audio processing.
+9.1 Write consent forms: adult consent, and for anyone under 18, written parental
+permission plus the minor's own assent. If you also enter an ISEF-affiliated science fair,
+an IRB must approve the study before you recruit anyone (ISEF rules).
+9.2 Write a data plan: what you record, where it's stored (encrypted), who can see it
+and when it's deleted. Delete trial videos once they're annotated.
+9.3 Stage 2 home nights: 10 healthy adults × 2 nights, phone on the nightstand plus the
+Vernier belt. Sync the clocks at the start with three deep breaths visible in both
+recordings, and include bed partners when possible.
+9.4 Analyze Stage 2: breathing rate per 30-second epoch, phone vs belt. Make a Bland–
+Altman plot (bias and 95% limits of agreement). Target: mean absolute error under 1
+breath per minute.
+NightEcho — Full Project Proposal
+Page 19 of 31
+
+page 20
+Done when the Stage 2 and Stage 3 targets are evaluated and logged, pass or fail.
+Phase 10 · Clinical partner (Nov 2–Apr 20)
+Done when at least one clinician agrees to mentor you or write a letter.
+Phase 11 · Conrad deliverables (Dec 14–Jan 7, then Summit prep)
+9.5 Stage 3 scripted trials: per session, 20 acted dream-enactment movements
+(punching, kicking, talking, shouting) and 20 bed exits, with and without a partner. A
+separate camera records video as ground truth.
+9.6 Analyze Stage 3: event recall, false alarms per hour of quiet lying, and alert delay
+(video exit time to alert timestamp).
+9.7 Pediatric audibility check, with parental permission and the child's assent: play the
+sweep while the child is awake, and adjust band and volume until there's no reaction.
+9.8 Note any pet reactions during home nights, and lower the volume if needed.
+10.1 Shortlist 10 sleep centers or movement-disorder clinics, starting with university
+hospitals. Look for clinicians who publish on RBD.
+10.2 Send a short email: who you are, the one-sentence idea, Figure 1, a request for a
+20-minute call, and a promise to follow their institution's rules. Follow up once after a
+week.
+10.3 Ask for three things, in order: mentorship, a letter of support for the brief, and a
+pilot.
+10.4 Draft the Stage 4 pilot protocol with the partner: adults with RBD confirmed by
+video sleep study, plus controls, with the phone beside the bed during their scheduled
+study. Outcomes are AUC, specificity and calibration. With 30 RBD patients and 30
+controls, an AUC near 0.85 has a 95% confidence interval of about ±0.10 (Hanley–
+McNeil method).
+10.5 The partner's IRB approves the pilot, and the partner handles patient data under
+its own privacy rules.
+10.6 Attach letters of support to the Innovation Brief as optional attachments.
+11.1 Innovation Brief (at most 3,000 words across 10 questions; see the mapping
+section): full draft Dec 20, coach review Dec 27, final Jan 3.
+11.2 Attach the reference list, plus up to two optional attachments (Figures 1 and 3, or a
+one-page results sheet and letters).
+NightEcho — Full Project Proposal
+Page 20 of 31
+
+page 21
+Done when everything is submitted by January 5.
+Validation plan and targets
+Validation climbs four stages, from a simulation the team can run now to a clinical pilot
+that needs a partner. Each stage must meet its target before the next begins.
+Figure 4. Staged validation plan with pass/fail gates.
+11.3 Innovation Video (3–5 minutes): storyboard by Dec 15. Film the app on a real
+nightstand, the breathing proof from step 8.3, the figures, results and impact. Finish
+editing by Dec 30, then upload an MP4 under 800 MB and an unlisted YouTube or
+Vimeo link.
+11.4 Website: team story, mission, figures and brand (name, logo, colors, voice),
+reachable by direct link (you may hide it from search engines). Live by Jan 3.
+11.5 Pay the $499 entry fee or apply for financial aid. Submit everything in Award Force
+by Jan 5, two days before the Jan 7, 11:59 PM CT deadline, and test the video and
+website links from a logged-out browser.
+11.6 If you're named finalists in February: prepare the Power Pitch and executive brief,
+build the tabletop display, and rehearse answers to 20 hard judge questions, such as
+"Isn't phone sonar already done?", "How do you know it's REM?" and "What about
+privacy and the FDA?"
+11.7 Innovation Summit: Apr 21–24, 2027, Space Center Houston.
+NightEcho — Full Project Proposal
+Page 21 of 31
+
+page 22
+By January 7, aim to have Stage 1 complete, several Stage 2 nights analyzed, one Stage 3
+session done, and Stage 4 written up as a plan with your outreach status.
+If a target is missed, report the result with its confidence interval, the likely reason and
+the fix you'll try next. An honest miss with a clear next step is more credible than a vague
+claim.
+Stage Data Primary metric Target What it needs
+1 ·
+Simulation
+103 CAP subjects as
+simulated sonar
+Subject-level
+AUC, leave-one-
+subject-out
+> 0.85 Laptops and
+free GPU time
+2 · Home
+nights
+10 adults × 2 nights,
+phone plus belt
+Breathing-rate
+error
+< 1
+breath/min
+Consent forms;
+respiration belt
+3 · Scripted
+trials
+Acted movements
+and bed exits,
+partner present
+Bed-exit recall;
+alert delay
+> 95%; < 10 s Consent; a
+camera for
+ground truth
+4 · Clinical
+pilot
+RBD confirmed by
+video sleep study,
+vs controls
+Real-world AUC,
+specificity,
+calibration
+Set with the
+partner
+Clinical partner
+and IRB
+approval
+NightEcho — Full Project Proposal
+Page 22 of 31
+
+page 23
+Timeline
+The data track (Phases 0–7) and the phone track (Phase 8) run in parallel through
+December, so a working demo and Stage 1 results exist before the January 7 submission.
+Human testing and clinical outreach continue toward the Summit. Dates assume work
+starts Monday, November 2; the exact February announcement date isn't published, so
+it's shown as the whole month.
+Team roles
+Conrad teams have 2–5 students plus an adult coach. Four roles cover the work; a smaller
+team combines them.
+NightEcho build plan · November 2026 to April 2027
+NightEcho — Full Project Proposal
+Page 23 of 31
+
+page 24
+Two or three students: combine signal processing with the app, and machine learning
+with research and business.
+Five students: add a design lead for the video, website, logo and Summit display.
+Weekly rhythm: a 15-minute planning call on Monday, work sessions midweek, and a
+Sunday demo plus lab-notebook entries.
+Budget
+The prototype costs about $433 with every optional item, which keeps it under the $500 in
+the Lean Canvas. The largest single cost is Conrad's $499 entry fee, and financial aid is
+available for it.
+Role Owns Phases
+Signal-processing lead Sonar chain, simulator, phone-response
+tests
+2, 3, 8 (with the app
+lead)
+Machine-learning lead Sleep stager, RBD model, leakage tests,
+statistics
+4, 5, 7
+App lead Android app, on-device models, caregiver
+alerts, parent reports
+6, 8
+Research and business
+lead
+Literature, novelty check, ethics forms,
+testing logistics, clinical outreach, brief,
+video, website
+0, 9, 10, 11
+Coach (adult) Weekly guidance, consent and data-plan
+review, budget, Conrad portal
+All
+Item Cost (USD) Notes
+Vernier Go Direct
+Respiration Belt
+$149 Breathing reference for Stage 2
+(vernier.com)
+Used Android test phone about $100 (estimate) A second brand to compare speakers;
+team phones cover the rest
+External 1 TB drive about $60 (estimate) Holds the datasets
+NightEcho — Full Project Proposal
+Page 24 of 31
+
+page 25
+Possible funding: school club or parent-organization grants, local Parkinson's or
+Alzheimer's community groups, Conrad financial aid, and crowdfunding. Check current
+prices before buying.
+Ethics, privacy, safety and regulation
+NightEcho handles sensitive health information about vulnerable people, so these rules
+shape the design itself, not just the paperwork.
+People in the study
+Adult volunteers sign informed consent. Minors need written parental permission plus
+their own assent.
+If you enter an ISEF-affiliated fair, an IRB must approve human testing before you
+recruit. Studies that only review publicly available datasets such as CAP are exempt
+under ISEF rules; ask your fair's review committee whether a request-access dataset
+like MESA counts.
+NightEcho never tells anyone they have a disease. Results say "higher risk" and
+recommend a doctor visit.
+Item Cost (USD) Notes
+Google Play developer
+account
+$25, one time Optional: needed only to distribute
+the app, not to test it
+Apple Developer Program $99 per year Optional: only for the iOS version
+Cloud computing $0 Free GPU notebooks (Kaggle, Google
+Colab)
+Prototype subtotal about $433 With every optional item
+Innovation Stage entry
+fee
+$499 Due with the January 7 submission;
+financial aid available
+Website domain about $15 per year
+(estimate)
+Optional; free site builders work
+Summit display printing about $100 (estimate) Only if named finalists
+Travel to Houston Varies Only if named finalists
+NightEcho — Full Project Proposal
+Page 25 of 31
+
+page 26
+Hearing "higher risk of Parkinson's" is frightening, and there is no proven prevention
+yet. Explain what RBD risk means in plain words, avoid alarming language, and in the
+clinical pilot let a clinician deliver results.
+Privacy and data security
+Raw audio is never saved or uploaded. Only event labels, timestamps and nightly
+features are kept.
+Processing happens on the phone, local storage is encrypted, and any upload is opt-in.
+Consumer health apps outside HIPAA fall under the FTC's Health Breach Notification
+Rule, amended in 2024, which counts sharing health data without permission as a
+breach.
+If the free tier shows ads, use contextual ads only: never use health data for targeting,
+and never include an ad tool that collects it. The FTC has penalized health apps for
+sharing health data with advertisers.
+Patient data from a clinical partner stays under that clinic's HIPAA rules and data
+agreements.
+Safety
+Keep the chirp volume low. Use pediatric mode for children, who hear higher tones
+than adults, and watch pets, which hear well above 22 kHz.
+Present bed-exit alerts as a convenience, not a medical alarm, until testing proves
+them reliable.
+Keep the phone plugged in on the nightstand, never under a pillow, to avoid
+overheating.
+Regulation
+An app that screens for disease risk is likely regulated by the FDA as medical-device
+software, while basic sleep tracking faces lighter rules. Until cleared, present
+NightEcho as a research prototype.
+The likely path: an FDA Pre-Submission (Q-Sub) meeting backed by clinical-pilot data,
+then a De Novo or 510(k) request.
+NightEcho — Full Project Proposal
+Page 26 of 31
+
+page 27
+Business plan summary
+Families can use NightEcho free or by subscription; the revenue that scales comes from
+memory-care facilities, drug-trial sponsors and licensing. All prices are hypotheses to
+test.
+Market
+Revenue streams (from the Lean Canvas)
+Free screening tier supported by contextual ads, with no health data shared.
+$7.99 per month premium: no ads, caregiver alerts and doctor-ready reports.
+Memory-care facilities: $15 per bed per month, running on refurbished phones.
+Per-referral fees from Parkinson's trial sponsors.
+Licensing the sonar engine to sleep apps.
+Because processing runs on the phone, the cost of serving one more user is low; the main
+costs are clinical validation, regulatory work, security and support.
+Go-to-market steps
+1 . Run a free pilot with 5–10 families from local autism and dementia caregiver support
+groups.
+2. Partner with one sleep clinic for the RBD pilot and a referral pathway.
+3. Pilot in one memory-care facility using refurbished phones.
+4. Approach Parkinson's research groups once the clinical pilot has data.
+Segment Size Who pays
+Adults with RBD 1.06% of adults in a Swiss
+general-population study,
+mostly undiagnosed
+Screening is free; Parkinson's
+trial sponsors pay per referral
+People with
+Alzheimer's dementia
+7.4 million Americans age 65+
+in 2026
+Families (subscription);
+memory-care facilities (per bed)
+Autistic children About 1 in 31 U.S. eight-year-
+olds
+Families (subscription)
+NightEcho — Full Project Proposal
+Page 27 of 31
+
+page 28
+5. Grow through sleep clinics, neurologists, Parkinson's and Alzheimer's foundations,
+autism parent networks and the app stores.
+Competitors and positioning
+Risks and mitigations
+The biggest risks are scientific: simulated sonar may not match real sonar, and REM is
+hard to detect in people with RBD. Both are tested early and reported honestly.
+Competitor What it offers NightEcho's difference
+SleepScore app Phone-sonar sleep
+tracking
+RBD screening, dementia alerts
+and a pediatric mode
+Under-mattress sensors (e.g.,
+Withings)
+Bed-sensor sleep
+tracking
+Nothing to buy or install
+Bedroom radar (e.g.,
+MinderCare research)
+Contactless dementia
+monitoring
+No added hardware; RBD
+screening
+Smartwatches and rings Wrist or finger sleep
+tracking
+Nothing to wear or charge, which
+matters for children and people
+with dementia
+Sleep labs Diagnosis NightEcho decides who needs a
+lab study, sending them more of
+the right patients
+Risk Likelihood (our
+estimate)
+Impact Mitigation
+Simulated sonar doesn't
+match real phone sonar
+Medium High Tune the simulator with real
+phone recordings (step 8.3);
+label Stage 1 results as
+simulation; confirm on real
+nights in Stages 2–4
+NightEcho — Full Project Proposal
+Page 28 of 31
+
+page 29
+Risk Likelihood (our
+estimate)
+Impact Mitigation
+REM detection is weak,
+especially in RBD
+High High Lean on breathing irregularity
+and sleep-cycle timing; report
+REM recall per group; fall
+back to a whole-night
+movement index if needed
+Only 22 RBD subjects in
+CAP
+High Medium Confidence intervals, simple
+models, a pre-registered plan,
+and framing Stage 1 as
+feasibility
+Time crunch before January
+7
+High High Build baselines first; submit
+by January 5; cut iOS and
+extras first
+No clinical partner by
+January
+High Medium Present Stage 4 as a plan with
+an outreach log; keep asking
+through April
+A phone can't play or record
+near 22 kHz
+Medium Medium Test each phone first (step
+8.2); narrow the sweep to 18–
+20 kHz
+Children or pets hear the
+chirps
+Medium Medium Pediatric mode, low volume
+and audibility checks
+The phone stops the app
+overnight to save battery
+Medium Medium Foreground service, phone
+plugged in, battery
+optimization turned off for
+the app; overnight test
+Results frighten users Medium High "Risk, not diagnosis" wording,
+a clear referral path, clinician-
+delivered results in pilots
+MESA access is delayed Medium Low Use the open PhysioNet 2018
+set
+Someone has already done
+it
+Low High Novelty check in week 1;
+narrow the claim to what is
+new
+NightEcho — Full Project Proposal
+Page 29 of 31
+
+page 30
+How this proposal maps to the Innovation Brief
+Each of the brief's 10 questions draws on specific sections of this proposal; the word
+limits add up to exactly 3,000.
+Judges score Innovation (30%), Storytelling and Professionalism (20%), Practicality
+(20%), Marketing Strategy (20%) and Finances (10%), according to the 2026–27 Student
+Guide.
+Risk Likelihood (our
+estimate)
+Impact Mitigation
+Health data is leaked or
+misused
+Low High No audio stored, encryption,
+opt-in uploads, no health data
+used for ads
+# Brief question Words Draw from
+1 Elevator Pitch 150 At a glance; What NightEcho adds
+2 Team 150 Team roles, plus your own story of
+why you chose this problem
+3 Opportunity 300 Problem and significance
+4 Key Metrics (design, technology,
+what's new, impact, protection)
+750 System overview; Sonar sensing
+design; What NightEcho adds; the
+patent step in the novelty check
+5 Validation / Progress 450 Validation plan and targets; results
+from Phases 7 and 9; clinical
+outreach status
+6 Market 300 Business plan: Market
+7 Competition 300 Prior work table; Competitors and
+positioning
+8 Go-To-Market 150 Go-to-market steps
+9 Business Model 300 Revenue streams; Budget
+10 Fundraising 150 Budget and funding sources
+NightEcho — Full Project Proposal
+Page 30 of 31
+
+page 31
+Sources
+Clinical evidence:
+Postuma et al., Risk and predictors of dementia and parkinsonism in idiopathic RBD,
+Brain 2019
+Haba-Rubio et al., Prevalence of RBD in the general population (HypnoLaus), SLEEP
+Skjærbæk et al., Self-applied mastoid ExG for automated RBD detection, medRxiv
+2026
+Cesari et al., Isolated RBD: is screening possible?, J Sleep Res 2025
+Alzheimer's Association, 2026 Facts and Figures
+Rowe et al., Reducing dangerous nighttime events in persons with dementia,
+Alzheimer's & Dementia 2009
+Lim et al., Sleep fragmentation and risk of incident Alzheimer's disease, Sleep 2013
+HHS: CDC autism prevalence of 1 in 31 (ADDM 2022 data)
+Rapp et al., Actigraphy feasibility in autistic preschoolers, Sleep 2025 abstract
+Prior work:
+Contactless home monitoring of Alzheimer's-related night-time behavior, Alzheimer's &
+Dementia 2025
+MinderCare Radar, Imperial College London
+UW CoMotion: SleepScore app inspired by ApneaApp research
+Detection of sleep apnea using sonar smartphone technology, IEEE EMBC 2019
+ActiTect: actigraphy-based RBD screening, npj Digital Medicine
+Detecting isolated RBD at home with a lower-back wearable, npj Digital Medicine
+Datasets and equipment:
+CAP Sleep Database, PhysioNet
+MESA, National Sleep Research Resource
+You Snooze You Win: PhysioNet/CinC Challenge 2018
+Vernier Go Direct Respiration Belt
+Rules and regulation:
+Conrad Challenge 2026–27 Student Guide
+ISEF rules: human participants
+FTC Health Breach Notification Rule, Federal Register 2024
+NightEcho — Full Project Proposal
+Page 31 of 31
