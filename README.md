@@ -15,16 +15,26 @@ A research prototype for contactless sleep monitoring with phone sonar.
 - `reports/`: generated figures and results, ignored by git
 - `tests/`: data prep checks
 
-## Run data prep
+## Codespaces development
 
-Python 3.11 or newer is enough for the current tools. No packages need installing.
-Run from this folder:
+From the repository root, use CPython 3.14.2 and Poetry 2.5.2 to reproduce the
+tested setup. In the current Codespace, `python3` resolves to that interpreter.
+Poetry installs the project in the repository's `.venv` using `poetry.lock`.
+The current tools have no third-party runtime dependencies.
+
+```sh
+poetry env use python3
+poetry check --lock
+poetry sync
+poetry run python -m unittest discover -s tests -v
+```
+
+The source tools also run directly with Python 3.11 or newer:
 
 ```sh
 PYTHONPATH=src python3 -m nightecho.cap inventory
 PYTHONPATH=src python3 -m nightecho.cap stages --record n1
 PYTHONPATH=src python3 -m nightecho.cap inspect --record n1
-PYTHONPATH=src python3 -m unittest discover -s tests -v
 ```
 
 The stage command needs `data/raw/cap/n1.txt`. The inspect command needs
@@ -41,3 +51,14 @@ PYTHONPATH=src python3 -m nightecho.prep --record n16
 ```
 
 This writes a small epoch CSV and a prep report under `data/interim/cap/`.
+
+To load a local CAP recording and print waveform quality and label counts:
+
+```sh
+poetry run python -m nightecho.waveform --record n8
+```
+
+In Python, `nightecho.waveform.load_night("n8")` returns calibrated waveforms
+at their native rates, channel metadata, missing channel names, and the
+30-second label grid. Call `waveform.epoch_samples(epoch)` for the samples
+in that epoch. Keep the paired EDF and annotation files in `data/raw/cap/`.
